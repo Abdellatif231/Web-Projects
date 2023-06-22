@@ -1,0 +1,57 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #22A699, #F2BE22, rgb(105, 255, 105)) ;
+    padding: 0%;
+    margin: 0%;
+}
+
+.app-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+    min-height: 100vh;
+}
+
+.app-container > button{
+    font-size: 2rem;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    background-color: rgb(127, 255, 212, .75);
+    outline: none;
+}
+
+.app-container > button:hover{
+    background-color: white;
+}
+
+.span-tow{
+    grid-column: span 2;
+}
+
+.output{
+    grid-column: 1 / -1;
+    background-color: rgb(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.pre-output{
+    color: rgb(255, 255, 255, .75);
+    font-size: 1rem;
+}
+
+.current-output{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
