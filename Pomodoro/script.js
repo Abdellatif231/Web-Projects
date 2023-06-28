@@ -15,17 +15,20 @@ const countDown = () => {
             let minLeft = Math.floor(totalSecends / 60);
             let secLeft = totalSecends % 60;
             totalSecends--;
-            
+            str_min.textContent = minLeft;
             if(secLeft < 10){
                 secDev.textContent = '0' + secLeft;
             }
             else{
                 secDev.textContent = secLeft;
             }
-            str_min.textContent = minLeft;
+
+            if(minLeft === 0 && secLeft === 0){
+                clearInterval(myIntervale)
+            }
             
         }
-        setInterval(upDateTime, 1000);
+        myIntervale = setInterval(upDateTime, 1000);
     }
     else {
         alert('Session has already started.');
